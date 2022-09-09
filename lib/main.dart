@@ -14,6 +14,7 @@ class MyCard extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const CircleAvatar(
                 radius: 50,
@@ -38,46 +39,51 @@ class MyCard extends StatelessWidget {
                   letterSpacing: 2.5,
                 ),
               ),
-              Container(
-                color: Colors.white,
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
                 margin:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: const EdgeInsets.all(10),
-                child: Row(children: [
-                  const Icon(
-                    Icons.phone,
-                    color: Colors.teal,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    leading: const Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      '+98 914 703 1237',
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.teal.shade900,
+                          fontFamily: 'SansPro'),
+                    ),
                   ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    '+98 914 703 1237',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SansPro'),
-                  ),
-                ]),
+                ),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    const Icon(
+              Card(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    leading: const Icon(
                       Icons.email,
                       color: Colors.teal,
                     ),
-                    const SizedBox(width: 10),
-                    Text('fekri.mohammadreza86@gmail.com',
-                    style: TextStyle(
-                      fontFamily: 'SansPro',
-                      fontSize: 20,
-                      color: Colors.teal.shade900
-                    ),)
-                  ],
+                    title: Text(
+                      'fekri.mohammadreza86@gmail.com',
+                      style: TextStyle(
+                          fontFamily: 'SansPro',
+                          fontSize: 14,
+                          color: Colors.teal.shade900),
+                    ),
+                  ),
                 ),
               )
             ],
