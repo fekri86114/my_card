@@ -13,13 +13,14 @@ class MyCard extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            color: Colors.red,
-            child: Text('Hello, world!'),
-            width: 100,
-            height: 100,
-            margin: EdgeInsets.only(top: 200,),
-            padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.red,
+                backgroundImage: AssetImage('images/my_image.jpg'),
+              )
+            ],
           ),
         ),
       ),
